@@ -1,0 +1,800 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url(../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url(../fonts/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --margin-body: 100px;
+    --color-bg-grey: #F0F0F0;
+    --slightly-darker-grey: #00000066;
+    --color-grey-content: #00000094;
+    --color-discount-text: #FF3333;
+    --color-discount-background: #ff33331f;
+}
+
+
+/* section one  black strip on top */
+header .black-strip {
+    width: 100%;
+    height: 38px;
+    background-color: var(--color-black);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+header .black-strip h1 {
+    position: absolute;
+    color: var(--color-white);
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-weight: normal;
+    left: 490px;
+    right: 545px;
+    padding: 9px 0;
+    white-space: nowrap;
+}
+
+header .black-strip .sign a {
+    color: var(--color-white);
+    font-weight: 450;
+    padding-bottom: 0px;
+    text-underline-offset: 2.5px;
+}
+
+
+header .black-strip img {
+    position: absolute;
+    top: 10.5px;
+    right: 80px;
+}
+
+/* End of section one black strip  */
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+/*  section one start */
+.section-one {
+    width: 1250px;
+    margin: 0 auto;
+    position: relative;
+    height: 776px;
+}
+
+
+/* section 1 nav bar 1 */
+
+
+.nav-one {
+    margin: 62px auto 24px auto;
+    width: 1250px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-one .pages {
+    display: flex;
+    color: var(--color-black);
+    font-size: 16px;
+    font-family: 'Satoshi';
+    margin: 0 40px;
+}
+
+.nav-one .pages ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.nav-one .pages ul li:first-child {
+    margin-left: 0;
+}
+
+.nav-one .pages ul li:nth-child(2) {
+    margin-top: 6px;
+    margin-left: 6.25px;
+}
+
+.nav-one .pages ul li {
+    list-style-type: none;
+    margin-left: 24px;
+}
+
+
+
+/*  input tag */
+.nav-one input {
+    background-image: url(../images/magnifying-glass.png);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+    background-color: var(--color-bg-grey);
+    width: 577px;
+    height: 48px;
+    border: none;
+    border-radius: 62px;
+    padding: 12px 16px;
+    margin-right: 40px;
+}
+
+.nav-one input::placeholder {
+    font: 'Satoshi';
+    font-size: 16px;
+    padding-left: 32px;
+}
+
+/* end of input */
+
+/* cart */
+.nav-one .cart-one {
+    width: 62px;
+    height: 24px;
+    display: flex;
+    gap: 14px;
+}
+
+/* end of section 1 nav bar 1 */
+
+
+.section-one hr {
+    width: 1250px;
+    color: var(--color-bg-grey);
+    margin: 37px auto 24px auto;
+}
+
+/* section 1 nave bar 2 */
+
+.nav-two {
+    width: 1250px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    font-family: 'Satoshi';
+    font-size: 16px;
+}
+
+.nav-two .breadcrumb li a:link {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.nav-two .breadcrumb li:nth-child(even) {
+    padding-right: 12px;
+}
+
+.nav-two .breadcrumb li:nth-child(odd) {
+    padding-right: 4px;
+}
+.nav-two .breadcrumb {
+    list-style: none;
+    background-color: var(--color-white);
+    align-items: center;
+    display: flex;
+}
+
+.nav-two .breadcrumb li {
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    line-height: 24px;
+}
+
+/* section 1 nav 2 end */
+
+
+
+/* section 1 shirts and lightbox */
+.left-side-one {
+    position: relative;
+}
+
+.left-side-one .light-box {
+    margin: 41.25px 0px 80px 0;
+    width: 617px;
+    height: 530px;
+}
+
+.left-side-one .light-box .imgs {
+    position: absolute;
+    height: 530px;
+    display: grid;
+    gap: 14px;
+}
+
+.left-side-one .light-box .imgs img {
+    width: 152px;
+    height: 168px;
+}
+
+.left-side-one .light-box ul li:nth-child(2) {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.left-side-one .light-box .display {
+    width: 447px;
+    height: 530px;
+    position: absolute;
+    top: -3px;
+    left: 150px;
+    margin-left: 16px;
+}
+
+
+/* section one right side one */
+.right-side-one {
+    width: 595px;
+    height: 530px;
+    position: absolute;
+    top: 170px;
+    right: 0;
+    margin-left: 40px;
+}
+
+
+.right-side-one h2 {
+    margin-bottom: 11px;
+    font-family: 'Integral CF';
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* review */
+.right-side-one .review {
+    display: flex;
+    width: 193px;
+    height: 24.7px;
+    gap: 16px;
+    margin-top: 11px;
+    margin-bottom: 14.29px;
+}
+
+.right-side-one .review img {
+    width: 139px;
+}
+
+.right-side-one .review h2 {
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.right-side-one .review h2 .total {
+    color: #00000066;
+    font-weight: 450;
+}
+
+/* prices */
+.right-side-one .prices {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.right-side-one .prices .box {
+    width: 176px;
+    height: 43px;
+    display: flex;
+    gap: 12px;
+}
+
+.right-side-one .prices .box h2 {
+    font-size: 32px;
+    font-family: 'Satoshi';
+    font-weight: bold;
+}
+
+.right-side-one .prices .box h2:nth-child(2) {
+    color: var(--slightly-darker-grey);
+}
+
+.right-side-one .prices .discount {
+    width: 72px;
+    height: 34px;
+    border-radius: 62px;
+    padding: 6px 14px;
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 500px;
+    color: var(--color-discount-text);
+    background-color: var(--color-discount-background);
+}
+
+/* colors and content */
+.right-side-one .content {
+    border-bottom: 2px solid var(--color-bg-grey);
+    padding: 16px 0;
+}
+
+.section-one .right-side-one .content p {
+    line-height: 22px;
+    font-size: 16px;
+    font-family: 'Satoshi';
+    color: var(--color-grey-content);
+}
+
+.section-one .right-side-one .colors {
+    padding: 18px 0;
+    border-bottom: 2px solid var(--color-bg-grey);
+}
+
+.section-one .right-side-one .colors h3 {
+    font-family: 'Satoshi';
+    color: var(--color-grey-content);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.section-one .right-side-one .colors .color-set {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* sizes */
+.section-one .right-side-one .sizes {
+    padding: 20px 0;
+    border-bottom: 2px solid var(--color-bg-grey);
+}
+
+.section-one .right-side-one .sizes h3 {
+    font-family: 'Satoshi';
+    color: var(--color-grey-content);
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+
+.section-one .right-side-one .sizes .sizes-set {
+    display: flex;
+    gap: 12px;
+    color: var(--color-grey-content);
+    font-size: 16px;
+    font-family: 'Satoshi';
+    width: 420px;
+    height: 46px;
+}
+
+.section-one .right-side-one .sizes .sizes-set div {
+    border-radius: 62px;
+    padding: 12px 24px;
+    height: 46px;
+}
+
+.section-one .right-side-one .sizes .sizes-set .sml {
+    background-color: var(--color-bg-grey);
+    width: 86px;
+}
+
+.section-one .right-side-one .sizes .sizes-set .med {
+    background-color: var(--color-bg-grey);
+    width: 105px;
+}
+
+.section-one .right-side-one .sizes .sizes-set .lrg {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 89px;
+}
+
+.section-one .right-side-one .sizes .sizes-set .xl {
+    background-color: var(--color-bg-grey);
+    width: 104px;
+    white-space: nowrap;
+}
+
+/* cart 2 */
+.section-one .right-side-one .cart-two {
+    margin-top: 20px;
+    display: flex;
+    font-size: 16px;
+    font-family: 'Satoshi';
+    gap: 20px;
+}
+
+.section-one .right-side-one .cart-two .amount {
+    width: 170px;
+    height: 52px;
+    background-color: var(--color-bg-grey);
+    color: var(--color-black);
+    border-radius: 62px;
+    padding: 16px 20px;
+    align-items: center;
+    display: flex;
+    gap: 38px;
+}
+
+/* second button */
+
+.section-one .right-side-one .cart-two .add-to-cart {
+    width: 400px;
+    height: 52px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 16px 54px;
+    border-radius: 62px;
+    border: none;
+}
+
+.section-one .right-side-one .cart-two .add-to-cart a:link {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/* section 1 end */
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+
+/* section 2 start */
+.section-two {
+    width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-two .details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1250px;
+    margin-top: 56px;
+    border-bottom: 2px solid var(--color-bg-grey);
+}
+
+.section-two .details .nav {
+    text-align: center;
+    width: 414px;
+    padding: 24px;
+    font-size: 20px;
+    font-family: 'Satoshi';
+    color: var(--color-grey-content);
+    line-height: 22px;
+}
+
+.section-two .details .nav:nth-child(2) {
+    border-bottom: 2px solid var(--color-black);
+    white-space: nowrap;
+    align-items: center;
+    font-weight: 450;
+    color: var(--color-black);
+}
+
+/* panel */
+
+.section-two .panel {
+    width: 1250px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+    position: relative;
+}
+
+.section-two .panel .reviews {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.section-two .panel .reviews h2 {
+    font-size: 24px;
+    font-family: 'Satoshi';
+}
+
+.section-two .panel .reviews p {
+    font-size: 16px;
+    font-family: 'Satoshi';
+    color: var(--color-grey-content);
+}
+
+.section-two .panel .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 354px;
+    height: 48px;
+}
+
+.section-two .panel .right div {
+    border-radius: 62px;
+    display: flex;
+    height: 48px;
+    font-family: 'Satoshi';
+    padding: 16px 20px;
+}
+
+.section-two .panel .right .img {
+    width: 48px;
+    background-color: var(--color-bg-grey);
+    background-image: url(../images/filter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-two .panel .right .latest {
+    width: 120px;
+    gap: 20px;
+    background-color: var(--color-bg-grey);
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.section-two .panel .right .write {
+    width: 166px;
+    background-color: var(--color-black);
+    columns: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Reviews boxes and main container */
+
+.section-two .main-container {
+    display: flex;
+    gap: 18px;
+}
+
+.section-two .main-container .container {
+    display: grid;
+    gap: 18px;
+}
+
+.section-two .main-container .container .box {
+    width: 610px;
+    height: 241px;
+    border: 2px solid var(--color-bg-grey);
+    padding: 28px 32px;
+    border-radius: 20px;
+    font-family: 'Satoshi';
+}
+
+.section-two .main-container .container .box .content {
+    width: 570px;
+    height: 139px;
+}
+
+.section-two .main-container .container .box .content .name {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.section-two .main-container .container .box .content p {
+    color: var(--color-grey-content);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.section-two .main-container .container .box .date {
+    margin-top: 24px;
+    color: var(--color-grey-content);
+    font-size: 16px;
+    font-weight: 550;
+}
+
+/* load button */
+.section-two .button button {
+    position: absolute;
+    margin: 32px auto;
+    left: 40.5%;
+    background-color: var(--color-white);
+    width: 230px;
+    height: 52px;
+    padding: 16px 37px;
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 550;
+    border-radius: 62px;
+    white-space: nowrap;
+    align-items: center;
+    border: 2px solid var(--color-bg-grey);
+}
+
+.section-two .button .load a:link {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/* section 2 end  */
+
+/* =============================================================================================== */
+
+/* section 3 start */
+
+.section-three {
+    width: 1250px;
+    margin: 160px auto 0 auto;
+    position: relative;
+}
+
+.section-three h2 {
+    font-family: 'Integral CF';
+    font-size: 48px;
+    text-align: center;
+}
+
+/* container section 3 */
+
+.section-three .container {
+    display: flex;
+    gap: 21px;
+    position: absolute;
+    margin-top: 55px;
+}
+
+.section-three .container .box .price {
+    display: flex;
+    gap: 10px;
+}
+
+.section-three .container .box h3 {
+    font-family: 'Satoshi';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section-three .container .box .rating {
+    display: flex;
+    gap: 13px;
+    margin: 8px auto;
+    align-items: center;
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.section-three .container .box .rating .total {
+    color: var(--color-grey-content);
+}
+
+
+/* prices */
+.section-three .container .box .price {
+    font-family: 'Satoshi';
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.section-three .container .box .price .cancel {
+    color: var(--color-grey-content);
+}
+
+.section-three .container .box .price .discount {
+    border-radius: 62px;
+    padding: 6px 14px;
+    background-color: var(--color-discount-background);
+    color: var(--color-discount-text);
+    font-family: 'Satoshi';
+    font-size: 12px;
+    font-weight: 450;
+    align-items: center;
+}
+
+/* section 3 end */
+
+
+
+
+
+/* =================================================================================================================== */
+/* ============================================================================================== */
+
+
+
+
+
+/* section 4 start */
+
+.section-four {
+    position: relative;
+    top: 460px;
+    margin: 78px auto 0 auto;
+    width: 1240px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    padding: 36px 64px;
+    border-radius: 20px;
+    background-color: var(--color-black);
+    z-index: 1111;
+}
+
+
+.section-four .black-box {
+    width: 1112px;
+    height: 108px;
+    position: relative;
+}
+
+.section-four .black-box .heading {
+    width: 551px;
+    height: 94px;
+    color: var(--color-white);
+    font-family: 'Integral CF';
+    font-size: 28px;
+    line-height: 45px;
+    position: absolute;
+}
+
+.section-four .black-box .contact {
+    height: 108px;
+    width: 349px;
+    display: grid;
+    gap: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.section-four .black-box .contact input {
+    width: 349px;
+    height: 48px;
+    background-image: url(../images/mail.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    padding: 12px 16px;
+    border-radius: 62px;
+    border: none;
+    right: 0;
+    outline: none;
+}
+
+.section-four .black-box .contact input::placeholder {
+    padding-left: 42px;
+}
+
+/* button */
+.section-four .black-box .contact button {
+    width: 349px;
+    height: 48px;
+    padding: 12px 16px;
+    border-radius: 62px;
+    border: none;
+    right: 0;
+    background-color: var(--color-white);
+    font-size: 16px;
+    font-family: 'Satoshi';
+    justify-items: center;
+}
+
+.section-four .black-box .contact button a:link {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+

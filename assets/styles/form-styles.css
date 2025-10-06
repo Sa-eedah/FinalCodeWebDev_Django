@@ -1,0 +1,81 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+
+}
+
+h1{
+    color: #03528ba8;  
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #03528ba8;
+}
+
+.container {
+
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    background-color: #03528b59;
+    /* Optional background color */
+    box-shadow: 0 2px 10px 5px rgba(27, 27, 27, 0.1);
+    height: 60%;
+    width: 26%;
+    margin: auto;
+    border-radius: 7px;
+
+}
+
+form {
+    background-color: white;
+    /* Optional background for the form */
+    padding: 20px;
+    /* Space inside the form */
+    border-radius: 7px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px 10px rgba(27, 27, 27, 0.1);
+    /* Optional shadow */
+    margin: 20px;
+
+}
+
+label {
+    display: inline-block;
+    width: 120px;
+    font-size: 16px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    /* Default border */
+    transition: border-color 0.5s;
+    /* Smooth transition */
+}
+
+.error {
+    color: red;
+    /* Set error messages to red */
+    font-size: 12px;
+    margin-left: 10px;
+
+}
+
+.error-input {
+    border-color: red;
+    /* Input box turns red on error */
+}
+
+.valid-input {
+    border-color: green;
+    /* Input box turns green on success */
+}

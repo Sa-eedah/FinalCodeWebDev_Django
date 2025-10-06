@@ -1,0 +1,1574 @@
+@font-face {
+    font-family: Integral CF;
+    src: url(../fonts/Demo_Fonts/Fontspring-DEMO-integralcf-bold.otf);
+}
+@font-face {
+    font-family: satoshi;
+    src: url(../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black:#000000;
+    --color-white: #FFFFFF;
+    --color-grey: #696969;
+    --color-lightgrey: #F0F0F0;
+    --color-lightgray: rgb(194, 194, 194); 
+    --margin-body: 100px;
+    --color-bg-grey: #F0F0F0;
+    --slightly-darker-grey: #00000066;
+    --color-grey-content: #00000094;
+    --color-discount-text: #FF3333;
+    --color-discount-background: #ff33331f;
+}
+/* Header */
+.container-one {
+    max-width: 100%;
+    height: 38px;
+}
+
+.main-header .black {
+    background-color: var(--color-black);
+    font-family: "satoshi";
+}
+
+.main-header .black p {
+    color: var(--color-white);
+}
+
+.black {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.black p  {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 100px;
+}
+
+.sign-up a {
+    color: var(--color-white);
+    font-weight: 450;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    
+} 
+
+.navigation img {
+    vertical-align: text-bottom;
+}
+ 
+.two-col {
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 24px;
+} 
+
+.col {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 24px;
+    font-family: "satoshi";  
+}
+.navigation img {
+    margin-left: 5px;
+}
+
+.main-shop {
+    display: flex;
+    gap: 17px;
+    padding: 5px;
+}
+
+.two-col .navigation ul li, a{
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+#search {
+    border: none; 
+}
+
+.search-input {
+    width: 151px;
+    height: 22px;
+    border: none;
+    outline: none;
+}
+
+#search img {
+    width: 24px;
+    height: 24px;
+}
+.search-box {
+    border-radius: 10px;
+    width: 400px;
+    height: 40px;
+}
+
+#search, .search-input {
+    padding: 5px;
+    vertical-align: middle; 
+}
+
+/* Section One */
+.container-two {
+    max-width: 1440px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.section-one .leftside-one .heading-section h1 {
+    font-family: "Integral CF";
+    font-weight: bold;
+    font-size: 64px;
+    width: 577px;
+    margin-bottom: 32px;
+    margin-top: 30px;
+}
+
+.section-one .leftside-one p {
+    width: 545px; 
+    font-family: "satoshi";
+    color: var(--color-grey);
+    line-height: 22px;
+    margin-bottom: 32px;
+}
+
+.shop-now .shopnow {
+    width: 210px;
+    padding: 16px 54px;
+    border-radius: 62px;
+    background-color: var(--color-black);
+    margin-bottom: 48px; 
+    border: none;
+}
+
+.shopnow a {
+    font-family: "satoshi";
+    font-weight: 600;
+    color: var(--color-white);
+
+}
+
+.step-section {
+    line-height: 30px;
+}
+
+.card {
+    width: 160px;
+}
+
+.step-section .card h2 {
+    font-family: "satoshi";
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.step-section .card p {
+    font-family:"satoshi";
+    color: var(--color-grey);  
+    width: 156px; 
+    position: relative;
+}
+
+.step-section {
+    display: flex;
+    gap: 20px;
+}
+/* rightside-one img-section */
+.rightside-one img {
+    width: 1440px;
+    position: absolute;
+    right: 0px;  
+    height: 700px;
+}
+
+.section-one {
+    display: flex;
+}
+
+.leftside-one {
+    position: relative;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+.rightside-one::before {
+    content: url(../images/big-star.png);
+    position: absolute;
+    right:80px;
+    top: 200px;
+    z-index: 1;
+} 
+
+.rightside-one::after {
+    content: url(../images/small-star.png);
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    right: 44%;
+    top: 60%;
+}
+
+/* slider section */
+
+.slider-section {
+    background-color: var(--color-black);
+    height: 122px;
+    margin-top: 70px;
+    margin-bottom: 72px;
+}
+
+.autoplay {
+    padding: 44px 100px;
+    max-width: 1440px;
+}
+/* Section Two */
+
+.section-two .products-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.section-two h2{
+    text-align: center; 
+    font-family: "Integral CF";
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.section-two img {
+    max-width: 100%;
+    height: 298px;
+}
+
+.section-two .stars {
+    width: 104px;
+    height: 18px;
+}
+
+.section-two .rating {
+    font-size: 14px;
+    font-family: "satoshi";
+    color: var(--color-black);
+    position: relative;
+    bottom: 4px;
+}
+
+.section-two p {
+    font-family: "satoshi";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.price s {
+    color: var(--color-grey);
+}
+
+.section-two .sale {
+    color: red;
+    font-weight: 600;
+    font-family: "satoshi";
+    font-size: 12px;
+    background-color: rgba(241, 214, 214, 0.98);
+    padding: 6px 14px;
+    border-radius: 62px;
+
+}
+
+.section-two .price {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "satoshi";
+}
+
+.view {
+    margin-top: 36px;
+    padding: 16px 54px;
+    font-weight: 600;
+    margin-left: 500px;
+    border-radius: 62px;
+    border: 1px solid var(--color-lightgray)
+}
+
+/* Section Three */
+
+.section-three .productssection-two {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: coral; */
+}
+
+.section-three h2{
+    text-align: center; 
+    font-family: "Integral CF";
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 143px;
+    margin-bottom: 55px;
+}
+
+.section-three img {
+    max-width: 100%;
+    height: 298px;
+}
+
+#bermuda {
+    width: 66.09px;
+}
+
+.section-three .stars {
+    width: 104px;
+    height: 18px;
+}
+
+.section-three p {
+    font-family: "satoshi";
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.section-three .rating {
+    font-size: 14px;
+    font-family: "satoshi";
+    color: var(--color-black);
+    position: relative;
+    bottom: 4px;
+}
+
+.section-three .price s {
+    color: var(--color-grey);
+}
+
+.section-three .sale {
+    color: red;
+    font-weight: 600;
+    font-family: "satoshi";
+    font-size: 12px;
+    border-radius: 62px;
+    background-color: rgba(241, 214, 214, 0.98);
+    padding: 6px 14px;
+
+}
+
+.section-three .price {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "satoshi";
+}
+
+.section-three .view {
+    margin-top: 36px;
+    padding: 16px 54px;
+    font-weight: 600;
+    margin-left: 500px;
+    border-radius: 62px;
+    border: 1px solid var(--color-lightgray)
+}
+
+/* Section Four */
+
+.section-four {
+    background-color: var(--color-lightgray);
+    margin-top: 95px;
+    margin-bottom: 80px;
+    border-radius: 40px;
+}
+
+.section-four h2 {
+    margin-top: 82.5px;
+    padding-top: 90px;
+    text-align: center;  
+    font-family: "Integral CF";
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 64px;
+}
+
+.section-four img {
+     border-radius:20px;
+}
+
+.section-four .flex {
+    display: flex;
+    flex-wrap: wrap; 
+    row-gap: 15px;
+    column-gap: 15px; 
+    background-color: var(--color-lightgray);
+    padding: 0px 15px 76px 15px;
+    border-radius: 40px;
+}
+
+.gym img, .casual img {
+    width: 407px;
+    height: 289px;
+}
+
+.party img, .formal img {
+    width: 684px;
+    height: 289px;
+}
+
+.casual, .formal, .party, .gym {
+    position: relative; 
+    
+}
+
+.centered {
+    font-family: "satoshi";
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 0%;
+    left: 10%; 
+} 
+
+.center {
+    font-family: "satoshi";
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 0%;
+    left:7%;
+   
+}
+
+.centerone {
+    font-family: "satoshi";
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 0%;
+    left:10%; 
+}
+
+/* Section Five */
+
+.slider-sectionTwo {
+    position: relative;
+    margin-bottom: 170px;
+}
+
+.slider-sectionTwo h2 { 
+    font-family: "Integral CF";
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 68px;
+}
+
+.flexthree {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.slider-sectionTwo .item {
+    max-width: 100%;
+    height: 240px;
+    padding: 28px 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    margin-right: 12px;
+    margin-left: 12px;   
+}
+
+.slider-sectionTwo .item h3 {
+    font-family:"satoshi";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.testamonials .item h3::after{
+    content: url(../images/greentick.png);
+    vertical-align: sub;
+}
+.testamonials .item p {
+    color: var(--color-grey);
+    font-family: "satoshi";
+    line-height: 22px;
+}
+/* ===========================
+   FOOTER SECTION
+=========================== */
+
+.footer-section {
+    position: relative;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+/* Heading in black box */
+.footer-section h3 {
+    font-family: "Integral CF";
+    font-weight: bold;
+    font-size: 40px;
+    width: 551px;
+}
+
+/* Black top box */
+.blacktwo-one {
+    background-color: var(--color-black);
+    padding: 36px 64px;
+    width: 85%;
+    height: 180px;
+    color: var(--color-white);
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* optional depth */
+}
+
+/* Email input + button */
+.email-input {
+   background-image: url(../images/email.png); 
+   background-size: 24px;
+   background-repeat: no-repeat;
+   background-position: 15px;
+   padding: 12px 16px;
+   width: 349px;
+   height: 48px;
+   border-radius: 62px;
+   color: var(--color-grey);
+   border: none;
+   outline: none;
+}
+
+input[type="email"]::placeholder {
+    padding-left: 40px;
+}
+
+#btn {
+    margin-top: 14px;
+    padding: 8px 16px;
+    width: 349px;
+    height: 46px;
+    border-radius: 62px;
+    font-family: "satoshi";
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+#btn a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/* ===========================
+   GREY FOOTER SECTION
+=========================== */
+
+.footerbottom-one {
+    position: relative;
+    top: -90px; /* creates overlap with black box */
+    z-index: 1;
+    background-color: var(--color-lightgray);
+    width: 100%; /* full width of the screen */
+    left: 50%;
+    transform: translateX(-50%); /* center on viewport */
+    margin: 0;
+    padding: 140px 100px 50px 100px;
+    display: grid;
+    grid-template-columns: 248px 105px 136px 149px 149px;
+    justify-content: space-between;
+}
+.footerbottom-one p {
+    margin-top: 25px;
+    color: var(--color-grey);
+    font-family: "satoshi";
+    font-size: 14px;
+    line-height: 22px;
+    width: 248px; 
+    height: 66px;
+    margin-bottom: 35px;
+}
+
+.social-icons {
+    width: 200px;
+    height: 28px;
+    margin-bottom: 50px;
+}
+
+.social-icons img {
+    margin-right: 12px;
+}
+
+.column h3 {
+    font-weight: 600;
+    font-family: "satoshi";
+    font-size: 16px;
+}
+
+.column ul {
+    list-style-type: none;
+}
+
+.column li a {
+    font-family: "satoshi";
+    color: var(--color-grey);
+    text-decoration: none;
+}
+
+/* ===========================
+   BANKING STRIP (bottom)
+=========================== */
+
+.banking {
+    width: 100%;
+    background-color: var(--color-lightgray);
+    border-top: 1px solid var(--color-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    margin-top: -90px;
+}
+.banking p {
+    font-family: "satoshi";
+    color: var(--color-grey);
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.container-three {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank img {
+    margin-left: 10px;
+}
+
+
+.container-three {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank img {
+    margin-left: 10px;
+}
+
+
+/* accordion Styling */
+
+.questions h1 {
+    padding-top: 25px;
+    text-align: center;
+    color: var(--color-white);
+    text-decoration: underline;
+    font-family: "Integral CF";
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#accordion h2 {
+    color: var(--color-black);
+    font-family: "Integral CF";
+    font-size: 18px;
+}
+
+#accordion p {
+    font-size: 17px;
+    font-family: "satoshi";
+    color: var(--color-black);
+}
+
+#accordion {
+   width: 85%;
+   font-family: "satoshi";
+   border-radius: 20px;
+   position: absolute;
+   left: 100px;
+   right: 100px;
+}
+
+.ui-state-active {
+    background-color: var(--color-lightgray);
+    border: 1px solid var(--color-black);
+    border-radius: 15px;
+    color: var(--color-black);
+}
+
+.ui-widget-content {
+    background-color: var(--color-lightgray);
+    border-radius: 15px;
+}
+
+.ui-corner-all {
+    border-radius: 15px;
+}
+
+.questions {
+    background-color: var(--color-black);
+    border-radius: 15px;
+    margin: 20px 0px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Filter page */
+.container-first {
+    max-width: 1440px;
+    width: 100%;
+   
+}
+
+.container-second {
+    max-width: 1440px;
+}
+
+
+.main-header .logo img {
+    width: 100%;
+
+}
+
+.main-header .col h1 {
+    font-size: 32px;
+    font-family: "Intergral CF";
+    margin-left: 70px;
+}
+
+
+.main-header .two-col .col .navigation ul {
+    list-style: none;
+
+}
+
+.main-header .two-col {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.col {
+    display: flex;
+    gap: 30px;
+}
+
+.main-header .two-col .navigation ul {
+    display: flex;
+    gap: 25px;
+}
+
+.main-header .two-col .navigation li {
+    font-family: "Satoshi";
+}
+
+.main-header .two-col .col a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.two-col .col .search img {
+    position: absolute;
+    left: 625px;
+    bottom: 528px;
+    width: 505px;
+
+}
+
+.two-col .col .frame img {
+    position: absolute;
+    right: 30px;
+    bottom: 540px;
+    left: 1135px;
+    width: 20.25px
+}
+
+.two-col .col .vector1 img {
+    position: absolute;
+    right: 0px;
+    bottom: 540px;
+    left: 1175px;
+    width: 20.25px;
+
+}
+
+/* Rightside */
+
+.rightside .side {
+    width: 100%;
+    float: left;
+    position: relative;
+    
+}
+
+.rightside {
+    display: flex;
+
+}
+
+.rightside .side .right h1 {
+    font-family: "Satoshi";
+    color: grey;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 70px;
+}
+
+.rightside .side .right img {
+    display: flex;
+    margin-left: 115px;
+    margin-top: -25px;
+}
+
+.rightside .side .right p {
+    font-size: 16px;
+    margin-left: 135px;
+    margin-top: -26px;
+    font-family: "Satoshi";
+}
+
+.rightside .side .left {
+    position: absolute;
+    width: 315px;
+    left: 55px;
+    border: 1px solid black;
+    height: 1260px;
+    top: 70px;
+    
+   
+}
+
+.rightside .side .left h2 {
+    display: flex;
+    font-family: "Satoshi";
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 45px;
+
+}
+
+.rightside .side .left img {
+    display: flex;
+    margin-left: 290px;
+    margin-top: -25px;
+}
+
+.side .line img {
+    margin-left: 50px;
+}
+
+.rightside .side .clothes p {
+    display: flex;
+    font-family: "Satoshi";
+    margin-top: 16px;
+    font-size: 14px;
+    color: grey;
+    width: 150px;
+    line-height: 30px;
+    margin-left: 95px;
+
+}
+
+.rightside .side .clothes img {
+    display: flex;
+    margin-left: 345px;
+    margin-top: -30px;
+
+}
+
+.side .line img {
+    padding: 24px 20px;
+    width: 250px;
+   
+}
+
+.rightside .side .price h3 {
+    display: flex;
+    font-family: "Satoshi";
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 95px;
+}
+
+.rightside .side .price img {
+    display: flex;
+    margin-left: 345px;
+    margin-top: -20px;
+}
+
+.rightside .side .line2 img {
+    margin-bottom: -20px;
+    margin-left: 65px;
+}
+
+.rightside .side .line2 p {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Satoshi";
+    margin-top: 20px;
+    margin-left: 100px;
+    position: relative;
+
+}
+
+.rightside .side .line3 p {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Satoshi";
+    margin-top: -31px;
+    margin-left: 250px;
+    position: relative;
+}
+
+.side .line img {
+    padding: 24px 20px;
+    width: 250px;
+}
+
+.rightside .side .colors h4 {
+    display: flex;
+    font-family: "Satoshi";
+    margin-bottom: 120px;
+    font-size: 20px;
+    margin-left: 95px;
+}
+
+.rightside .side .colors img {
+    display: flex;
+    margin-left: 345px;
+    margin-top: -150px;
+}
+
+.rightside .side .colors2 img {
+    display: flex;
+    margin-top: 30px;
+    width: 280px;
+    height: 100px;
+    margin-left: 90px;
+}
+
+.rightside .side .size h5 {
+    display: flex;
+    font-family: "Satoshi";
+    margin-bottom: 120px;
+    font-size: 20px;
+    margin-left: 95px;
+}
+
+.rightside .side .size img {
+    display: flex;
+    margin-left: 345px;
+    margin-top: -150px;
+   
+}
+
+.rightside .side .size2 img {
+    display: flex;
+    margin-top: 30px;
+    width: 250px;
+    height: 240px;
+    margin-left: 90px;
+}
+
+.side .line img {
+    padding: 24px 20px;
+    width: 250px;
+}
+
+.rightside .side .dress h6 {
+    display: flex;
+    font-family: "Satoshi";
+    margin-bottom: 130px;
+    font-size: 20px;
+    margin-left: 95px;
+    width: 150px;
+}
+
+.rightside .side .dress img {
+    display: flex;
+    margin-left: 345px;
+    margin-top: -160px;
+}
+
+.rightside .side .style p {
+    display: flex;
+    font-family: "Satoshi";
+    margin-top: 10px;
+    font-size: 14px;
+    color: grey;
+    width: 150px;
+    line-height: 30px;
+    margin-left: 95px;
+}
+
+.rightside .side .style img {
+    display: flex;
+    margin-left: 345px;
+    margin-top: -20px;
+}
+
+
+.rightside .side .filter {
+    display: flex;
+    margin-top: 25px;
+    height: 40px;
+    width: 250px;
+    margin-left: 115px;
+}
+
+/* Section */
+
+.section .col1 {
+    max-width: 1440px;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 200px;
+
+}
+
+.section .col1 h1 {
+    font-size: 32px;
+    font-family: "Satoshi";
+    margin-top: -15px
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section .col1 .box1 img {
+    position: absolute;
+    left: 800px;
+    margin-top: -30px;
+
+}
+
+.section1 .box1 .img {
+    max-width: 920px;
+    height: 40px;
+    position: absolute;
+    border-radius: 5px;
+
+}
+
+
+.section .boxes .box {
+    float: left;
+    margin-top: 20px;
+    height: 380px;
+    margin-right: 5px;
+
+
+}
+
+.section .box p {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Satoshi";
+}
+
+
+.section .box2 img {
+    position: relative;
+    margin-top: 19px;
+    width: 905px;
+
+}
+
+span.red {
+    color: red;
+}
+
+.section s {
+    color: rgba(46, 45, 45, 0.733);
+}
+
+.blacktwo-two {
+    position: relative;
+    top: 350px;
+    left: 100px;  
+}
+
+.blacktwo-two {
+    background-color: var(--color-black);
+    padding: 36px 64px;
+    width: 85%;
+    height: 180px;
+    color: var(--color-white);
+    border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 260%; 
+} 
+
+/* Zayaan */
+
+    /* Product Section */
+    .product-section {
+        max-width: 1400px;
+        margin: 40px auto;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+
+    /* Image Gallery */
+    .product-gallery {
+        display: flex;
+        gap: 20px;
+    }
+
+    .thumbnail-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #e5e5e5;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: border-color 0.3s;
+    }
+
+    .thumbnail:hover {
+        border-color: #333;
+    }
+
+    .main-image {
+        flex: 1;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Product Info */
+    .product-info h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .stars {
+        color: #ffc107;
+        font-size: 20px;
+    }
+
+    .rating-score {
+        font-weight: 600;
+    }
+
+    .rating-score span {
+        color: #999;
+    }
+
+    .price-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .current-price {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .original-price {
+        font-size: 24px;
+        color: #999;
+        text-decoration: line-through;
+    }
+
+    .discount-badge {
+        background: #ffe0e0;
+        color: #ff3333;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+    }
+
+    .product-description {
+        color: #666;
+        margin-bottom: 25px;
+        line-height: 1.8;
+    }
+
+    /* Color Selection */
+    .color-selector {
+        margin-bottom: 25px;
+    }
+
+    .color-selector h3,
+    .size-selector h3 {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .color-options {
+        display: flex;
+        gap: 10px;
+    }
+
+    .color-option {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border-color 0.3s;
+    }
+
+    .color-option:hover {
+        border-color: #333;
+    }
+
+    .color-olive {
+        background: #4f5d2f;
+    }
+
+    .color-green {
+        background: #2d5934;
+    }
+
+    .color-navy {
+        background: #1e3a5f;
+    }
+
+    /* Size Selection */
+    .size-selector {
+        margin-bottom: 25px;
+    }
+
+    .size-options {
+        display: flex;
+        gap: 10px;
+    }
+
+    .size-option {
+        padding: 12px 24px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: #f5f5f5;
+    }
+
+    .size-option:hover {
+        border-color: #333;
+        background: #fff;
+    }
+
+    /* Cart Controls */
+    .cart-controls {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .quantity-selector {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 12px 24px;
+        background: #f5f5f5;
+        border-radius: 25px;
+        font-weight: 600;
+    }
+
+    .quantity-btn {
+        cursor: pointer;
+        font-size: 20px;
+        user-select: none;
+    }
+
+    .add-to-cart-btn {
+        flex: 1;
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+        background: #333;
+    }
+
+    /* Reviews Section */
+    .reviews-section {
+        max-width: 1400px;
+        margin: 60px auto;
+        padding: 0 40px;
+    }
+
+    .tabs {
+        display: flex;
+        gap: 40px;
+        border-bottom: 2px solid #e5e5e5;
+        margin-bottom: 30px;
+    }
+
+    .tab {
+        padding: 15px 0;
+        cursor: pointer;
+        color: #999;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+    }
+
+    .tab.active {
+        color: #333;
+        border-bottom-color: #333;
+    }
+
+    .reviews-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .reviews-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .reviews-count {
+        color: #999;
+    }
+
+    .reviews-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .filter-btn,
+    .write-review-btn {
+        padding: 10px 24px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .write-review-btn {
+        background: #000;
+        color: #fff;
+        border-color: #000;
+    }
+
+    .filter-btn:hover,
+    .write-review-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Review Cards */
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    .review-card {
+        border: 1px solid #e5e5e5;
+        padding: 25px;
+        border-radius: 12px;
+    }
+
+    .review-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .reviewer-name {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .verified-badge {
+        color: #4caf50;
+        font-size: 12px;
+    }
+
+    .review-text {
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .review-date {
+        color: #999;
+        font-size: 14px;
+    }
+
+    .load-more {
+        text-align: center;
+    }
+
+    .load-more-btn {
+        padding: 15px 60px;
+        border: 1px solid #e5e5e5;
+        border-radius: 25px;
+        background: #fff;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+
+    .load-more-btn:hover {
+        background: #f5f5f5;
+    }
+
+    /* Recommendations Section */
+    .recommendations {
+        max-width: 1400px;
+        margin: 60px auto;
+        padding: 0 40px;
+    }
+
+    .recommendations h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .product-card {
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .product-image {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        background: #f5f5f5;
+        aspect-ratio: 1;
+    }
+
+    .product-name {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .product-rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .product-price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product-price .current {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .product-price .original {
+        color: #999;
+        text-decoration: line-through;
+    }
+
+    .product-price .discount {
+        background: #ffe0e0;
+        color: #ff3333;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /* @media (max-width: 1024px) {
+        .product-section {
+            grid-template-columns: 1fr;
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    } */
+
