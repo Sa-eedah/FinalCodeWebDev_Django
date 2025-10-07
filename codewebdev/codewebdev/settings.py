@@ -116,6 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'shopco/static']  # if your static files live inside the app
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'Media'
 
