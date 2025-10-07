@@ -1,354 +1,184 @@
+{% extends "shopco/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project Website</title>
-    <link rel="stylesheet" href="{% static 'shopco/styles/styles.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'shopco/resources/slick-1.8.1/slick/slick.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'shopco/resources/slick-1.8.1/slick/slick-theme.css' %}" />
-</head>
+{% block title %}Home - Shop.Co{% endblock %}
 
-<body>
-    <!-- Header -->
-    <header class="main-header">
-        <div class="black container-one">
-            <p>Sign Up and get 20&#37; off to your first order.</p>
-            <div class="sign-up">
-                <a href="#">Sign Up Now</a>
-            </div>
-            <div class="close">
-                <a href="#"><img src="{% static 'shopco/images/closesign.png' %}" alt="close"></a>
+{% block content %}
+
+<!-- Hero Section -->
+<section class="section-one container-two">
+    <div class="leftside-one">
+        <div class="heading-section">
+            <h1>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
+            <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+            <div class="shop-now">
+                <button class="shopnow"><a href="#">Shop Now</a></button>
             </div>
         </div>
-        <div class="two-col container-two">
-            <div class="col">
-                <div class="logo">
-                    <a href="{% url 'index' %}"><img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co"></a>
-                </div>
-                <nav class="navigation">
-                    <ul>
-                        <li><a href="#">Shop <img src="{% static 'shopco/images/downarrow.png' %}" alt="downarrow"></a></li>
-                        <li><a href="#">On Sale</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Brands</a></li>
-                    </ul>
-                </nav>
-                <div class="search-box">
-                    <button id="search"><img src="{% static 'shopco/images/search.png' %}" alt="search"></button>
-                    <input type="text" class="search-input" placeholder="Search...">
-                </div>
-            </div>
-            <div class="main-shop">
-                <div class="shop">
-                    <a href="#"><img src="{% static 'shopco/images/trolley.png' %}" alt="trolley"></a>
-                </div>
-                <div class="profile">
-                    <a href="#"><img src="{% static 'shopco/images/profile.png' %}" alt="profile"></a>
-                </div>
-            </div>
-        </div>
-    </header>
 
-      <!-- Hero Section -->
-      <section class="section-one container-two">
-        <div class="leftside-one">
-            <div class="heading-section">
-                <h1>FIND CLOTHES THAT MATCH YOUR STYLE</h1>
-                <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
-                <div class="shop-now">
-                    <button class="shopnow"><a href="#">Shop Now</a></button>
-                </div>
-            </div>
-
-            <div class="step-section">
-                <div class="card"><h2>200+</h2><p>International Brands</p></div>
-                <div class="card"><h2>2,000+</h2><p>High-Quality Products</p></div>
-                <div class="card"><h2>30,000+</h2><p>Happy Customers</p></div>
-            </div>
-        </div>
-        <div class="rightside-one">
-            <img src="{% static 'shopco/images/couple.png' %}" alt="couple">
-        </div>
-    </section>
-
-    <!-- Slider Section -->
-    <section class="slider-section container-one">
-        <div class="autoplay">
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/versace.png' %}" alt="versace"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/zara-logo-1 1.png' %}" alt="zara"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/gucci-logo-1 1.png' %}" alt="gucci"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/prada-logo-1 1.png' %}" alt="prada"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/calvin-klein.png' %}" alt="calvin-klein"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/versace.png' %}" alt="versace"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/zara-logo-1 1.png' %}" alt="zara"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/gucci-logo-1 1.png' %}" alt="gucci"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/prada-logo-1 1.png' %}" alt="prada"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/calvin-klein.png' %}" alt="calvin-klein"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/versace.png' %}" alt="versace"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/zara-logo-1 1.png' %}" alt="zara"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/gucci-logo-1 1.png' %}" alt="gucci"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/prada-logo-1 1.png' %}" alt="prada"></a></div>
-            <div class="item"><a href="#"><img src="{% static 'shopco/images/calvin-klein.png' %}" alt="calvin-klein"></a></div>
-        </div>
-    </section>
-
-    <!-- New Arrivals -->
-    <section class="section-two container-two">
-        <h2>NEW ARRIVALS</h2>
-        <div class="products-section">
-            <div class="products">
-                <img src="{% static 'shopco/images/t-shirt.png' %}" alt="t-shirt">
-                <p>T-shirt with Tape Details</p>
-                <img class="stars" src="{% static 'shopco/images/stars-tape.png' %}" alt="tape">
-                <span class="rating">4.5/5</span>
-                <p class="price">&#36;120</p>
-            </div>
-            <div class="products">
-                <img src="{% static 'shopco/images/jeans.png' %}" alt="jeans">
-                <p>Skinny Fit Jeans</p>
-                <img class="stars" src="{% static 'shopco/images/stars-skinny.png' %}" alt="skinny">
-                <span class="rating">3.5/5</span>
-                <p class="price">&#36;240 <s>&#36;260</s> <span class="sale">-20&#37;</span></p>
-            </div>
-            <div class="products">
-                <img src="{% static 'shopco/images/red-check.png' %}" alt="red-check">
-                <p>Checkered Shirt</p>
-                <img class="stars" src="{% static 'shopco/images/stars-checkered.png' %}" alt="checkered">
-                <span class="rating">4.5/5</span>
-                <p class="price">&#36;180</p>
-            </div>
-            <div class="products">
-                <img src="{% static 'shopco/images/orange.png' %}" alt="orange">
-                <p>Sleeve Striped T-shirt</p>
-                <img class="stars" src="{% static 'shopco/images/stars-striped.png' %}" alt="striped">
-                <span class="rating">4.5/5</span>
-                <p class="price">&#36;130 <s>&#36;160</s> <span class="sale">-30&#37;</span></p>
-            </div>
-        </div>
-        <div>
-            <button class="view"><a href="#">View All</a></button>
-        </div>
-    </section>
-
-<!-- section Three -->
-    <section class="section-three container-two">
-        <h2>TOP SELLING</h2>
-        <div class="productssection-two">
-            <div class="products-one">
-                <img src="{% static 'shopco/images/greenshirt.png' %}" alt="greenshirt">
-                <p>Vertical Striped Shirt</p>
-                <img class="stars" src="{% static 'shopco/images/stars-vertical.png' %}" alt="vertial">
-                <span class="rating">5.0/5</span>
-                <p class="price"> &#36;212 <s>&#36;232</s> <span class="sale">-20&#37;</span></p>
-            </div>
-            <div class="products-one">
-                <img src="{% static 'shopco/images/orange-print.png' %}" alt="orange-print">
-                <p>Courage Graphic T-shirt</p>
-                <img class="stars" src="{% static 'shopco/images/stars-courage.png' %}" alt="courage">
-                <span class="rating">4.0/5</span>
-                <p class="price"> &#36;145</p>
-            </div>
-            <div class="products-one">
-                <img src="{% static 'shopco/images/denimshorts.png' %}" alt="denimshorts">
-                <p>Loose Fit Bermuda Shorts</p>
-                <img id="bermuda" class="stars" src="{% static 'shopco/images/stars-bermuda.png' %}" alt="bermuda">
-                <span class="rating">3.0/5</span>
-                <p class="price"> &#36;80</p>
-            </div>
-            <div class="products-one">
-                <img src="{% static 'shopco/images/black-jeans.png' %}" alt="black-jeans">
-                <p>Faded Skinny Jeans</p>
-                <img class="stars" src="{% static 'shopco/images/stars-faded.png' %}" alt="faded">
-                <span class="rating">4.5/5</span>
-                <p class="price"> &#36;210</p>
-            </div>
-        </div>
-        <div>
-            <button class="view"><a href="#">View All</a></button>
-        </div>
-
-    </section>
-
-    <!-- section Four -->
-    <section class="section-four container-two">
-        <h2>BROWSE BY DRESS STYLE</h2>
-        <div class="flex">
-            <div class="casual">
-                <a href="#"><img src="{% static 'shopco/images/casual.png' %}" alt="Casual"></a>
-                <div class="centered">Casual</div>
-            </div>
-
-            <div class="formal">
-                <a href="#"><img src="{% static 'shopco/images/formal.png' %}"alt="Formal"></a>
-                <div class="centered">Formal</div>
-            </div>
-       
-            <div class="party">
-                <a href="#"><img src="{% static 'shopco/images/party.png' %}" alt="Party"></a>
-                <div class="center">Party</div>
-            </div>
-
-            <div class="gym">
-                <a href="#"><img src="{% static 'shopco/images/gym.png' %}" alt="Gym"></a>
-                <div class="centerone">Gym</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="slider-sectionTwo container-two">
-        <div class="flexthree">
-            <h2>OUR HAPPY CUSTOMERS</h2>
-            <div class="arrows">
-                <span class="arrowleft"><img src="{% static 'shopco/images/arrow-down-bold 2.png' %}" alt="arrowleft"></span>
-                <span class="arrowright"><img src="{% static 'shopco/images/arrow-down-bold 1.png' %}" alt="arrowright"></span>
-            </div>
-        </div>
-        <div class="testamonials">
-            <div class="item">
-                <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
-                <h3>Sarah M.</h3>
-                <p>"I'm blown away by the quality and style of the clothes I received from Shop.co."</p>
-            </div>
-            <div class="item">
-                <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
-                <h3>Alex K.</h3>
-                <p>"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co."</p>
-            </div>
-
-            <div class="item">
-                <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
-                <h3>James L.</h3>
-                <p>&#34;As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled
-                    upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest
-                    trends.&#34;</p>
-            </div>
-
-            <div class="item">
-                <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
-                <h3>Sarah M.</h3>
-                <p>&#34;I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear
-                    to elegant dresses, every piece I've bought has exceeded my expectations.&#34;</p>
-            </div>
-
-            <div class="item">
-                <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
-                <h3>Alex K.</h3>
-                <p>&#34;Finding clothes that align with my personal style used to be a challenge until I discovered
-                    Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and
-                    occasions.&#34;</p>
-            </div>
-
-            <div class="item">
-                <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
-                <h3>James L.</h3>
-                <p>&#34;As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled
-                    upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest
-                    trends.&#34;</p>
-            </div>
-        </div>
-    </section>
-
-    {% load static %}
-
-    <!-- Footer Section -->
-    <section class="footer-section">
-      <div class="blacktwo-one">
-        <h3>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h3>
-        <div class="email-box">
-          <div>
-            <input type="email" class="email-input" placeholder="Please enter your Email">
-          </div>
-          <div>
-            <button id="btn"><a href="#">Subscribe to Newsletter</a></button>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <footer class="footerbottom-one">
-      <div class="column">
-        <a href="{% url 'index' %}">
-          <img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co">
-        </a>
-        <p>We have clothes that suit your style and which you&apos;re proud to wear. From women to men.</p>
-        <div class="social-icons">
-          <a href="https://x.com/?lang=en-za">
-            <img src="{% static 'shopco/images/twitter.png' %}" alt="twitter">
-          </a>
-          <a href="https://www.facebook.com/">
-            <img src="{% static 'shopco/images/facebook.png' %}" alt="facebook">
-          </a>
-          <a href="https://www.instagram.com/">
-            <img src="{% static 'shopco/images/instagram.png' %}" alt="instagram">
-          </a>
-          <a href="https://github.com/">
-            <img src="{% static 'shopco/images/github.png' %}" alt="github">
-          </a>
-        </div>
-      </div>
-    
-      <div class="column">
-        <h3>COMPANY</h3>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </div>
-    
-      <div class="column">
-        <h3>HELP</h3>
-        <ul>
-          <li><a href="#">Customer Support</a></li>
-          <li><a href="#">Delivery Details</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-    
-      <div class="column">
-        <h3>FAQ</h3>
-        <ul>
-          <li><a href="#">Account</a></li>
-          <li><a href="#">Manage Deliveries</a></li>
-          <li><a href="#">Orders</a></li>
-          <li><a href="#">Payments</a></li>
-        </ul>
-      </div>
-    
-      <div class="column">
-        <h3>RESOURCES</h3>
-        <ul>
-          <li><a href="#">Free eBooks</a></li>
-          <li><a href="#">Development Tutorial</a></li>
-          <li><a href="#">How to - Blog</a></li>
-          <li><a href="#">Youtube Playlist</a></li>
-        </ul>
-      </div>
-</footer>
-    
-    <div class="banking">
-      <div class="container-three">
-        <p>Shop.co &copy;2000 - 2023. All Rights Reserved</p>
-    
-        <div class="bank">
-            <img src="{% static 'shopco/images/visa.png' %}" alt="visa">
-            <img src="{% static 'shopco/images/mastercard.png' %}" alt="mastercard">
-            <img src="{% static 'shopco/images/paypal.png' %}" alt="paypal">
-            <img src="{% static 'shopco/images/applepay.png' %}" alt="applepay">
-            <img src="{% static 'shopco/images/gpay.png' %}" alt="gpay">
+        <div class="step-section">
+            <div class="card"><h2>200+</h2><p>International Brands</p></div>
+            <div class="card"><h2>2,000+</h2><p>High-Quality Products</p></div>
+            <div class="card"><h2>30,000+</h2><p>Happy Customers</p></div>
         </div>
     </div>
+    <div class="rightside-one">
+        <img src="{% static 'shopco/images/couple.png' %}" alt="couple">
     </div>
-    
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="{% static 'shopco/resources/slick-1.8.1/slick/slick.min.js' %}"></script>
-    <script src="{% static 'shopco/scripts/script.js' %}"></script>
-</body>
-</html>
+</section>
+
+<!-- Slider Section -->
+<section class="slider-section container-one">
+    <div class="autoplay">
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/versace.png' %}" alt="versace"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/zara-logo-1 1.png' %}" alt="zara"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/gucci-logo-1 1.png' %}" alt="gucci"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/prada-logo-1 1.png' %}" alt="prada"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/calvin-klein.png' %}" alt="calvin-klein"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/versace.png' %}" alt="versace"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/zara-logo-1 1.png' %}" alt="zara"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/gucci-logo-1 1.png' %}" alt="gucci"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/prada-logo-1 1.png' %}" alt="prada"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/calvin-klein.png' %}" alt="calvin-klein"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/versace.png' %}" alt="versace"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/zara-logo-1 1.png' %}" alt="zara"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/gucci-logo-1 1.png' %}" alt="gucci"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/prada-logo-1 1.png' %}" alt="prada"></a></div>
+        <div class="item"><a href="#"><img src="{% static 'shopco/images/calvin-klein.png' %}" alt="calvin-klein"></a></div>
+    </div>
+</section>
+
+<!-- New Arrivals -->
+<section class="section-two container-two">
+    <h2>NEW ARRIVALS</h2>
+    <div class="products-section">
+        <div class="products">
+            <img src="{% static 'shopco/images/t-shirt.png' %}" alt="t-shirt">
+            <p>T-shirt with Tape Details</p>
+            <img class="stars" src="{% static 'shopco/images/stars-tape.png' %}" alt="tape">
+            <span class="rating">4.5/5</span>
+            <p class="price">&#36;120</p>
+        </div>
+
+        <div class="products">
+            <img src="{% static 'shopco/images/jeans.png' %}" alt="jeans">
+            <p>Skinny Fit Jeans</p>
+            <img class="stars" src="{% static 'shopco/images/stars-skinny.png' %}" alt="skinny">
+            <span class="rating">3.5/5</span>
+            <p class="price">&#36;240 <s>&#36;260</s> <span class="sale">-20&#37;</span></p>
+        </div>
+
+        <div class="products">
+            <img src="{% static 'shopco/images/red-check.png' %}" alt="red-check">
+            <p>Checkered Shirt</p>
+            <img class="stars" src="{% static 'shopco/images/stars-checkered.png' %}" alt="checkered">
+            <span class="rating">4.5/5</span>
+            <p class="price">&#36;180</p>
+        </div>
+
+        <div class="products">
+            <img src="{% static 'shopco/images/orange.png' %}" alt="orange">
+            <p>Sleeve Striped T-shirt</p>
+            <img class="stars" src="{% static 'shopco/images/stars-striped.png' %}" alt="striped">
+            <span class="rating">4.5/5</span>
+            <p class="price">&#36;130 <s>&#36;160</s> <span class="sale">-30&#37;</span></p>
+        </div>
+    </div>
+    <div>
+        <button class="view"><a href="#">View All</a></button>
+    </div>
+</section>
+
+<!-- Top Selling -->
+<section class="section-three container-two">
+    <h2>TOP SELLING</h2>
+    <div class="productssection-two">
+        <div class="products-one">
+            <img src="{% static 'shopco/images/greenshirt.png' %}" alt="greenshirt">
+            <p>Vertical Striped Shirt</p>
+            <img class="stars" src="{% static 'shopco/images/stars-vertical.png' %}" alt="vertical">
+            <span class="rating">5.0/5</span>
+            <p class="price">&#36;212 <s>&#36;232</s> <span class="sale">-20&#37;</span></p>
+        </div>
+        <div class="products-one">
+            <img src="{% static 'shopco/images/orange-print.png' %}" alt="orange-print">
+            <p>Courage Graphic T-shirt</p>
+            <img class="stars" src="{% static 'shopco/images/stars-courage.png' %}" alt="courage">
+            <span class="rating">4.0/5</span>
+            <p class="price">&#36;145</p>
+        </div>
+        <div class="products-one">
+            <img src="{% static 'shopco/images/denimshorts.png' %}" alt="denimshorts">
+            <p>Loose Fit Bermuda Shorts</p>
+            <img id="bermuda" class="stars" src="{% static 'shopco/images/stars-bermuda.png' %}" alt="bermuda">
+            <span class="rating">3.0/5</span>
+            <p class="price">&#36;80</p>
+        </div>
+        <div class="products-one">
+            <img src="{% static 'shopco/images/black-jeans.png' %}" alt="black-jeans">
+            <p>Faded Skinny Jeans</p>
+            <img class="stars" src="{% static 'shopco/images/stars-faded.png' %}" alt="faded">
+            <span class="rating">4.5/5</span>
+            <p class="price">&#36;210</p>
+        </div>
+    </div>
+    <div>
+        <button class="view"><a href="#">View All</a></button>
+    </div>
+</section>
+
+<!-- Dress Style Section -->
+<section class="section-four container-two">
+    <h2>BROWSE BY DRESS STYLE</h2>
+    <div class="flex">
+        <div class="casual">
+            <a href="#"><img src="{% static 'shopco/images/casual.png' %}" alt="Casual"></a>
+            <div class="centered">Casual</div>
+        </div>
+
+        <div class="formal">
+            <a href="#"><img src="{% static 'shopco/images/formal.png' %}" alt="Formal"></a>
+            <div class="centered">Formal</div>
+        </div>
+
+        <div class="party">
+            <a href="#"><img src="{% static 'shopco/images/party.png' %}" alt="Party"></a>
+            <div class="center">Party</div>
+        </div>
+
+        <div class="gym">
+            <a href="#"><img src="{% static 'shopco/images/gym.png' %}" alt="Gym"></a>
+            <div class="centerone">Gym</div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="slider-sectionTwo container-two">
+    <div class="flexthree">
+        <h2>OUR HAPPY CUSTOMERS</h2>
+        <div class="arrows">
+            <span class="arrowleft"><img src="{% static 'shopco/images/arrow-down-bold 2.png' %}" alt="arrowleft"></span>
+            <span class="arrowright"><img src="{% static 'shopco/images/arrow-down-bold 1.png' %}" alt="arrowright"></span>
+        </div>
+    </div>
+    <div class="testamonials">
+        <div class="item">
+            <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
+            <h3>Sarah M.</h3>
+            <p>"I'm blown away by the quality and style of the clothes I received from Shop.co."</p>
+        </div>
+        <div class="item">
+            <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
+            <h3>Alex K.</h3>
+            <p>"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co."</p>
+        </div>
+        <div class="item">
+            <img src="{% static 'shopco/images/frame10.png' %}" alt="frame10">
+            <h3>James L.</h3>
+            <p>"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co."</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

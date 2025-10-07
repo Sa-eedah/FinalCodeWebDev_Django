@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>{% block title %}Shop.Co{% endblock %}</title>
+
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'shopco/styles/styles.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'shopco/resources/slick-1.8.1/slick/slick.css' %}" />
@@ -13,10 +14,10 @@
 </head>
 
 <body>
-   <!-- Header -->
-   <header class="main-header">
+<!-- HEADER -->
+<header class="main-header">
     <div class="black container-one">
-        <p>Sign Up and get 20&#37; off to your first order.</p>
+        <p>Sign Up and get 20&#37; off your first order.</p>
         <div class="sign-up">
             <a href="#">Sign Up Now</a>
         </div>
@@ -24,10 +25,13 @@
             <a href="#"><img src="{% static 'shopco/images/closesign.png' %}" alt="close"></a>
         </div>
     </div>
+
     <div class="two-col container-two">
         <div class="col">
             <div class="logo">
-                <a href="{% url 'home' %}"><img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co"></a>
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co">
+                </a>
             </div>
             <nav class="navigation">
                 <ul>
@@ -42,6 +46,7 @@
                 <input type="text" class="search-input" placeholder="Search...">
             </div>
         </div>
+
         <div class="main-shop">
             <div class="shop">
                 <a href="#"><img src="{% static 'shopco/images/trolley.png' %}" alt="trolley"></a>
@@ -53,38 +58,100 @@
     </div>
 </header>
 
+<!-- PAGE CONTENT -->
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
 
-<!-- Footer Section -->
+
+<!-- FOOTER SECTION -->
 <section class="footer-section">
     <div class="blacktwo-one">
         <h3>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h3>
-        <div class="email-box">
+        <form class="email-box" method="post" action="#">
+            {% csrf_token %}
             <div>
-                <input type="email" class="email-input" placeholder="Please enter your Email">
+                <input type="email" class="email-input" name="email" placeholder="Please enter your Email" required>
             </div>
             <div>
-                <button id="btn"><a href="#">Subscribe to Newsletter</a></button>
+                <button id="btn" type="submit">Subscribe to Newsletter</button>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 
+<!-- Main Footer -->
 <footer class="footerbottom-one">
-    <div class="column">
-        <a href="{% url 'home' %}"><img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co"></a>
-        <p>We have clothes that suit your style and which you&apos;re proud to wear. From women to men.</p>
-        <div class="social-icons">
-            <a href="https://x.com/?lang=en-za"><img src="{% static 'shopco/images/twitter.png' %}" alt="twitter"></a>
-            <a href="https://www.facebook.com/"><img src="{% static 'shopco/images/facebook.png' %}" alt="facebook"></a>
-            <a href="https://www.instagram.com/"><img src="{% static 'shopco/images/instagram.png' %}" alt="instagram"></a>
-            <a href="https://github.com/"><img src="{% static 'shopco/images/github.png' %}" alt="github"></a>
+    <div class="footer-container">
+
+        <div class="column">
+            <a href="{% url 'index' %}">
+                <img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co">
+            </a>
+            <p>We have clothes that suit your style and which you’re proud to wear. From women to men.</p>
+            <div class="social-icons">
+                <a href="https://x.com/?lang=en-za" target="_blank">
+                    <img src="{% static 'shopco/images/twitter.png' %}" alt="twitter">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="{% static 'shopco/images/facebook.png' %}" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="{% static 'shopco/images/instagram.png' %}" alt="instagram">
+                </a>
+                <a href="https://github.com/" target="_blank">
+                    <img src="{% static 'shopco/images/github.png' %}" alt="github">
+                </a>
+            </div>
+        </div>
+
+        <div class="column">
+            <h3>COMPANY</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h3>HELP</h3>
+            <ul>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Delivery Details</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h3>FAQ</h3>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Manage Deliveries</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Payments</a></li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h3>RESOURCES</h3>
+            <ul>
+                <li><a href="#">Free eBooks</a></li>
+                <li><a href="#">Development Tutorial</a></li>
+                <li><a href="#">How to - Blog</a></li>
+                <li><a href="#">YouTube Playlist</a></li>
+            </ul>
         </div>
     </div>
 </footer>
 
+<!-- Payment Section -->
 <div class="banking">
     <div class="container-three">
-        <p>Shop.co &copy;2000 - 2023. All Rights Reserved</p>
+        <p>Shop.co &copy; 2000 - 2025. All Rights Reserved</p>
         <div class="bank">
             <img src="{% static 'shopco/images/visa.png' %}" alt="visa">
             <img src="{% static 'shopco/images/mastercard.png' %}" alt="mastercard">
