@@ -3,5 +3,4 @@ from .models import Product
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'brand', 'price', 'rating')
-    prepopulated_fields = {'slug': ('name',)}
+    list_display = ('name', 'price', 'discount', 'rating', 'created_at')

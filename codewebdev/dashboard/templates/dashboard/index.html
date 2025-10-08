@@ -17,40 +17,40 @@
         <div class="product-card">
             <a href="{% url 'item:detail' item.id %}">
                 <div class="product-image-box">
-                    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                    {% if item.image %}
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                    {% else %}
+                        <img src="{% static 'shopco/images/placeholder.png' %}" alt="No Image">
+                    {% endif %}
                 </div>
                 <div class="product-info">
-                    <h3>{{ item.name }}</h3>
-
+                    <h3>{{ item.title }}</h3>
                     <div class="product-pricing">
                         <span class="price">${{ item.price }}</span>
-                        {% if item.old_price %}
-                        <span class="old-price">${{ item.old_price }}</span>
-                        <span class="discount">-{{ item.discount }}%</span>
+                        {% if item.original_price %}
+                        <span class="old-price">${{ item.original_price }}</span>
+                        <span class="discount">-{{ item.discount_percentage }}%</span>
                         {% endif %}
                     </div>
-
                     <p class="description">{{ item.description|truncatewords:20 }}</p>
-
                     <button class="add-btn">Add to Cart</button>
                 </div>
             </a>
         </div>
         {% empty %}
-        <p class="no-items">No items found.</p>
+        <p>No items found.</p>
         {% endfor %}
     </div>
 
     <!-- Categories Section -->
     <div class="categories-section">
         <h2 class="dashboard-title">Categories</h2>
-
         <div class="categories-grid">
             {% for category in categories %}
             <div class="category-card">
                 <a href="#">
                     <h3>{{ category.name }}</h3>
-                    <p>{{ category.items.count }} items</p>
+                    <p>{{ category.item_set.count }} items</p>
                 </a>
             </div>
             {% empty %}

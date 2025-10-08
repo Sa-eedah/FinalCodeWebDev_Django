@@ -21,11 +21,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dashboard/', include('dashboard.urls')),  # 👈 include the dashboard app
-    path('', include('shopco.urls')),  # 👈 connects the app URLs
-    path('items/', include('item.urls')),
+    path('', include('dashboard.urls')),
+    path('item/', include('item.urls')),
+    path('shopco/', include('shopco.urls')),
 ]
-# 👇 Serve static files in development
+
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
