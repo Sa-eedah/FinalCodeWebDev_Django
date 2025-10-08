@@ -21,7 +21,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('dashboard/', include('dashboard.urls')),  # 👈 include the dashboard app
     path('', include('shopco.urls')),  # 👈 connects the app URLs
+    path('items/', include('item.urls')),
 ]
 # 👇 Serve static files in development
 if settings.DEBUG:

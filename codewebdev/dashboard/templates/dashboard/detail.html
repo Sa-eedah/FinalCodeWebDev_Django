@@ -1,0 +1,68 @@
+{% extends 'shopco/base.html' %}
+{% load static %}
+
+{% block title %}{{ item.name }} | Shop.Co{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'shopco/styles/styles.css' %}">
+
+<div class="product-detail-container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="{% url 'home' %}">Home</a> ›
+        <a href="#">Shop</a> ›
+        <a href="#">{{ item.category.name }}</a> ›
+        <span>{{ item.name }}</span>
+    </nav>
+
+    <div class="product-detail-grid">
+
+        <!-- Product Image -->
+        <div class="product-detail-image">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-detail-info">
+            <h1>{{ item.name }}</h1>
+
+            {% if item.rating %}
+            <div class="rating">
+                <div class="stars">
+                    {% for i in "12345" %}
+                        {% if forloop.counter <= item.rating %}
+                            ★
+                        {% else %}
+                            ☆
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <span>{{ item.rating }}/5</span>
+            </div>
+            {% endif %}
+
+            <div class="price-box">
+                <span class="current-price">${{ item.price }}</span>
+                {% if item.old_price %}
+                    <span class="old-price">${{ item.old_price }}</span>
+                    <span class="discount">-{{ item.discount }}%</span>
+                {% endif %}
+            </div>
+
+            <p class="description">
+                {{ item.description }}
+            </p>
+
+            <div class="add-to-cart">
+                <div class="quantity-box">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

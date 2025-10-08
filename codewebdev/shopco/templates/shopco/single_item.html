@@ -1,55 +1,9 @@
+{% extends "shopco/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details Page</title>
-    <link rel="stylesheet" href="{% static 'shopco/styles/styles.css' %}">
-</head>
 
-<body>
-<!-- Header -->
-<header class="main-header">
-    <div class="black container-one">
-        <p>Sign Up and get 20&#37; off your first order.</p>
-        <div class="sign-up">
-            <a href="#">Sign Up Now</a>
-        </div>
-        <div class="close">
-            <a href="#"><img src="{% static 'shopco/images/closesign.png' %}" alt="close"></a>
-        </div>
-    </div>
+{% block title %}Single_Item Page{% endblock %}
 
-    <div class="two-col container-two">
-        <div class="col">
-            <div class="logo">
-                <a href="{% url 'home' %}"><img src="{% static 'shopco/images/SHOP.CO.png' %}" alt="Shop.Co"></a>
-            </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="{% url 'shop' %}">Shop <img src="{% static 'shopco/images/downarrow.png' %}" alt="downarrow"></a></li>
-                    <li><a href="{% url 'on_sale' %}">On Sale</a></li>
-                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
-                    <li><a href="{% url 'brands' %}">Brands</a></li>
-                </ul>
-            </nav>
-            <div class="search-box">
-                <button id="search"><img src="{% static 'shopco/images/search.png' %}" alt="search"></button>
-                <input type="text" class="search-input" placeholder="Search...">
-            </div>
-        </div>
-
-        <div class="main-shop">
-            <div class="shop">
-                <a href="#"><img src="{% static 'shopco/images/trolley.png' %}" alt="trolley"></a>
-            </div>
-            <div class="profile">
-                <a href="#"><img src="{% static 'shopco/images/profile.png' %}" alt="profile"></a>
-            </div>
-        </div>
-    </div>
-</header>
+{% block content %}
 
 <!-- Product Section -->
 <section class="product-section">

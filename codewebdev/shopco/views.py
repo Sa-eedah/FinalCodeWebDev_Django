@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import Product
 
 # Create your views here.
@@ -25,4 +25,9 @@ def filter_page(request):
         "query": query,
         "products": products
     })
+
+def single_item(request, slug):
+    product = get_object_or_404(Product, slug=slug)
+    return render(request, 'shopco/single_item.html', {'product': product})
+
 

@@ -1,0 +1,153 @@
+{% extends 'shopco/base.html' %}
+{% load static %}
+{% block title %}Items{% endblock %}
+{% block content %}
+<div class="items-container">
+    <div class="items-layout">
+        <!-- Filters Sidebar -->
+        <div class="filters-sidebar">
+            <div class="filters-content">
+                <h2 class="category-title">Casual</h2>
+                
+                <!-- Search -->
+                <form method="get" action="{% url 'item:items' %}" class="search-form">
+                    <input 
+                        name="query" 
+                        type="text" 
+                        value="{{ query }}" 
+                        placeholder="Search products..." 
+                        class="search-input"
+                    >
+                    <button class="search-button">
+                        Search
+                    </button>
+                </form>
+                
+                <hr class="filter-divider">
+                
+                <!-- Categories -->
+                <div class="filter-section">
+                    <p class="filter-label">Categories</p>
+                    <ul class="category-list">
+                        {% for category in categories %}
+                        <li>
+                            <a href="{% url 'item:items' %}?query={{ query }}&category={{ category.id }}" 
+                               class="category-link {% if category.id == category_id %}active{% endif %}">
+                                {{ category.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <hr class="filter-divider">
+                
+                <!-- Clear Filters -->
+                <div class="filter-section">
+                    <p class="filter-label">Clear Filters</p>
+                    <a href="{% url 'item:items' %}" class="clear-button">
+                        Clear All
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="products-section">
+            <!-- Header -->
+            <div class="products-header">
+                <p class="products-count">Showing 1-10 of 100 Products</p>
+                <div class="sort-container">
+                    <span class="sort-label">Sort by:</span>
+                    <select class="sort-select">
+                        <option>Most Popular</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid">
+                {% for item in items %}
+                <div class="product-card">
+                    <a href="{% url 'item:detail' item.id %}" class="product-link">
+                        <!-- Image Container -->
+                        <div class="product-image-container">
+                            <img src="{{ item.image.url }}" 
+                                 class="product-image" 
+                                 alt="{{ item.name }}">
+                        </div>
+                        
+                        <!-- Product Info -->
+                        <div class="product-info">
+                            <h2 class="product-name">{{ item.name }}</h2>
+                            
+                            <!-- Star Rating -->
+                            <div class="product-rating">
+                                {% if item.rating %}
+                                    {% with rating=item.rating|floatformat:1 %}
+                                    <div class="stars">
+                                        {% for i in "12345" %}
+                                            {% if forloop.counter <= item.rating %}
+                                                <span class="star filled">★</span>
+                                            {% elif forloop.counter|add:"-0.5" <= item.rating %}
+                                                <span class="star filled">★</span>
+                                            {% else %}
+                                                <span class="star empty">★</span>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <span class="rating-value">{{ rating }}/5</span>
+                                    {% endwith %}
+                                {% else %}
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span class="rating-value">3.5/5</span>
+                                {% endif %}
+                            </div>
+                            
+                            <!-- Price -->
+                            <div class="product-pricing">
+                                <span class="current-price">${{ item.price }}</span>
+                                {% if item.original_price and item.original_price > item.price %}
+                                    <span class="original-price">${{ item.original_price }}</span>
+                                    {% widthratio item.price item.original_price 100 as discount_percent %}
+                                    <span class="discount-badge">
+                                        -{{ discount_percent|add:"-100"|abs }}%
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Pagination (if needed) -->
+            {% if items.has_other_pages %}
+            <div class="pagination">
+                {% if items.has_previous %}
+                <a href="?page={{ items.previous_page_number }}&query={{ query }}&category={{ category_id }}" 
+                   class="pagination-button">Previous</a>
+                {% endif %}
+                
+                <span class="pagination-info">Page {{ items.number }} of {{ items.paginator.num_pages }}</span>
+                
+                {% if items.has_next %}
+                <a href="?page={{ items.next_page_number }}&query={{ query }}&category={{ category_id }}" 
+                   class="pagination-button">Next</a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
